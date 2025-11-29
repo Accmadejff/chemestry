@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorarea Luminii și Culorii</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .container { width: 85%; margin: auto; padding-top: 70px; }
+
+    header {
+      background: #333; color: #fff; padding: 8px 0;
+      border-bottom: #0779e4 2px solid; 
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+    }
+    header h1 { font-size: 1.4em; }
+    header span { color: #0779e4; }
+    nav ul { list-style: none; float: right; }
+    nav ul li { display: inline; margin-left: 15px; }
+    nav ul li a {
+      color: #fff; text-decoration: none; text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: #ffcc00; }
+
+    .main-section {
+      background: #fff; margin: 20px 0; padding: 25px;
+      border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      opacity: 0; transform: translateY(40px); transition: all 0.8s ease;
+    }
+    .main-section.visible { opacity: 1; transform: translateY(0); }
+
+    h2 { color: #0779e4; margin: 5px 0 15px 0; border-bottom: 2px solid #0779e4; }
+    .formula { font-family: 'Courier New', monospace; background: #e9e9e9; padding: 4px 6px; border-radius: 4px; }
+
+    .opera-arta {
+      margin-bottom: 20px; padding: 20px; border: 1px solid #ddd;
+      border-radius: 6px; transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .opera-arta:hover { transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .culoare-verde { border-left: 6px solid green; }
+    .culoare-portocaliu { border-left: 6px solid orange; }
+    .culoare-albastru { border-left: 6px solid blue; }
+
+    footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: 30px; }
+    img { max-width: 100%; border-radius: 8px; margin-top: 15px; }
+
+    /* Butoane limbă */
+    .lang-buttons { text-align: right; margin: 10px; }
+    .lang-buttons button {
+      margin-left: 5px; padding: 5px 10px; border: none; border-radius: 4px;
+      background: #0779e4; color: #fff; cursor: pointer;
+    }
+    .lang-buttons button:hover { background: #ffcc00; color: #333; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Explorarea <span>Luminii</span> și Culorii</h1>
+    <nav>
+      <ul>
+        <li><a href="#acasa">Acasă</a></li>
+        <li><a href="#newton">Newton</a></li>
+        <li><a href="#itten">Itten</a></li>
+        <li><a href="#pigmenti">Pigmenți</a></li>
+        <li><a href="#rupestre">Rupestre</a></li>
+        <li><a href="#arta">Artă</a></li>
+        <li><a href="#pace">Pacea</a></li>
+        <li><a href="#referinte">Referințe</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="lang-buttons">
+  <button onclick="setLang('ro')">Română</button>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('it')">Italiano</button>
+</div>
+
+<div class="container">
+  <section id="acasa" class="main-section">
+    <h2>Bine ați venit!</h2>
+    <p>Acest site explorează lumina, spectrul solar și culorile în artă, de la Newton la Itten.</p>
+    
+<p>Questo sito esplora la luce, lo spettro solare e i colori nell'arte, da Newton a Itten.</p>
+</section>
+
+  <section id="newton" class="main-section">
+    <h2>Isaac Newton și Spectrul Solar</h2>
+    <p>Newton a demonstrat că lumina albă este compusă din culorile spectrului vizibil (ROGVAIV).</p>
+   
+<p>Newton ha dimostrato che la luce bianca è composta dai colori dello spettro visibile (ROSSGV).</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Newton_prism_experiment.png" alt="Experimentul cu prisma al lui Newton">
+  </section>
+
+  <section id="itten" class="main-section">
+    <h2>Johannes Itten și Teoria Culorii</h2>
+    <p>Itten a creat cercul cromatic cu 12 culori și a definit schemele de armonii și contraste.</p>
+  
+<p>Itten ha creato la ruota dei 12 colori e ha definito schemi di armonie e contrasti.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Itten_color_wheel.png" alt="Cercul cromatic al lui Itten">
+  </section>
+
+  <section id="pigmenti" class="main-section">
+    <h2>Pigmenți naturali și artificiali</h2>
+    <ul>
+      <li><strong>Clorofilă (verde):</strong> <span class="formula">C55H72MgN4O5</span></li>
+      <li><strong>Licopen (roșu):</strong> <span class="formula">C40H56</span></li>
+      <li><strong>Azurit (albastru):</strong> mineral natural, carbonat bazic de cupru</li>
+      <li><strong>Ocru (galben):</strong> oxid de fier natural</li>
+      <li><strong>Galben de cadmiu:</strong> <span class="formula">CdS</span></li>
+      <li><strong>Roșu cadmiu:</strong> sulfura de cadmiu</li>
+      <li><strong>Ftalocianină de cupru (albastru-verde):</strong> <span class="formula">Cu(C8H4N2)4</span></li>
+    </ul>
+ 
+<p>Pigmenti naturali e artificiali: clorofilla (verde), licopene (rosso), azzurrite (blu), ocra (giallo), giallo di cadmio, rosso di cadmio, ftalocianina di rame (blu-verde).</p>
+    <img src="https://ro.wikipedia.org/wiki/Pigment#/media/Fi%C8%99ier:Natural_ultramarine_pigment.jpg" alt="Exemple de pigmenți naturali și artificiali">
+  </section>
+
+  <section id="rupestre" class="main-section">
+    <h2>Picturile rupestre</h2>
+    <p>Primele culori folosite au fost roșu (hematit), galben (ocruri), negru (cărbune). Exemple: Lascaux, Coliboaia.</p>
+    
+<p>I primi colori usati furono rosso (ematite), giallo (ocra), nero (carbone). Esempi: Lascaux, Coliboaia.</p>
+    <img src="https://ro.wikipedia.org/wiki/Pe%C8%99tera_din_Lascaux#/media/Fi%C8%99ier:Lascaux,_Megaloceros.jpg" alt="Picturi rupestre Lascaux">
+  </section>
+
+  <section id="arta" class="main-section">
+    <h2>Galeria Culorilor în Artă</h2>
+    <div class="opera-arta culoare-verde">
+      <h3>Verde: American Gothic – Grant Wood</h3>
+      <p>Tonuri subtile de verde creează atmosferă rurală.</p>
+      
+<p>Toni sottili di verde creano un'atmosfera rurale.</p>
+      <img src="https://en.wikipedia.org/wiki/American_Gothic#/media/File:Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg" alt="American Gothic de Grant Wood">
+    </div>
+    <div class="opera-arta culoare-portocaliu">
+      <h3>Portocaliu: Apus de soare – Claude Monet</h3>
+      <p>Lumina caldă portocalie evocă liniște și frumusețe.</p> 
+      
+<p>La luce calda arancione evoca pace e bellezza.</p>
+      <img src="https://en.wikipedia.org/wiki/Impression,_Sunrise#/media/File:Monet_-_Impression,_Sunrise.jpg" alt="Apus de soare de Claude Monet">
+    </div>
+    <div class="opera-arta culoare-albastru">
+      <h3>Albastru: Steaua nopții – Van Gogh</h3>
+      <p>Albastrul intens transmite emoție și mister.</p>
+      
+<p>Il blu intenso trasmette emozione e mistero.</p>
+      <img src="https://ro.wikipedia.org/wiki/Noapte_%C3%AEnstelat%C4%83#/media/Fi%C8%99ier:VanGogh-starry_night.jpg" alt="Steaua nopții de Van Gogh">
+    </div>
+  </section>
+
+  <section id="pace" class="main-section">
+    <h2>Culorile Păcii</h2>
+    <p>Pacea este simbolizată prin alb (puritate), albastru deschis (cer senin), verde (natură). În artă, pacea apare în peisaje liniștite, armonii cromatice și simboluri universale precum porumbelul alb și ramura de măslin.</p>
+    
+<p>La pace è simboleggiata dal bianco (purezza), azzurro chiaro (cielo sereno), verde (natura). Nell'arte, la pace appare in paesaggi tranquilli, armonie cromatiche e simboli universali come la colomba bianca e il ramo d'ulivo.</p>
+  </section>
+
+  <section id="referinte" class="main-section">
+    <h2>Referințe</h2>
+    <ul>
+      <li>Itten, Johannes – <em>The Art of Color</em></li>
+      <li>Newton, Isaac – <em>Opticks</em></li>
+      <li>NASA Science – Spectrul electromagnetic</li>
+      <li>Metropolitan Museum of Art – Colecții online</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 Explorarea Luminii și Culorii | Popoiu Rares&Prof.Hriscu Gina-Lili</p>
+</footer>
+
+<script>
+  // Animare la scroll
+  const sections = document.querySelectorAll('.main-section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  });
+</script>
